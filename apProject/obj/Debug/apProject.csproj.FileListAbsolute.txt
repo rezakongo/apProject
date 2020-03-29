@@ -1,0 +1,14 @@
+C:\Users\Parsa\Documents\C# Programs\apProject 1\apProject\bin\Debug\apProject.exe.config
+C:\Users\Parsa\Documents\C# Programs\apProject 1\apProject\bin\Debug\apProject.exe
+C:\Users\Parsa\Documents\C# Programs\apProject 1\apProject\bin\Debug\apProject.pdb
+C:\Users\Parsa\Documents\C# Programs\apProject 1\apProject\obj\Debug\MainWindow.g.cs
+C:\Users\Parsa\Documents\C# Programs\apProject 1\apProject\obj\Debug\App.g.cs
+C:\Users\Parsa\Documents\C# Programs\apProject 1\apProject\obj\Debug\apProject_MarkupCompile.cache
+C:\Users\Parsa\Documents\C# Programs\apProject 1\apProject\obj\Debug\apProject_MarkupCompile.lref
+C:\Users\Parsa\Documents\C# Programs\apProject 1\apProject\obj\Debug\MainWindow.baml
+C:\Users\Parsa\Documents\C# Programs\apProject 1\apProject\obj\Debug\apProject.g.resources
+C:\Users\Parsa\Documents\C# Programs\apProject 1\apProject\obj\Debug\apProject.Properties.Resources.resources
+C:\Users\Parsa\Documents\C# Programs\apProject 1\apProject\obj\Debug\apProject.csproj.GenerateResource.cache
+C:\Users\Parsa\Documents\C# Programs\apProject 1\apProject\obj\Debug\apProject.exe
+C:\Users\Parsa\Documents\C# Programs\apProject 1\apProject\obj\Debug\apProject.pdb
+C:\Users\Parsa\Documents\C# Programs\apProject 1\apProject\obj\Debug\apProject.csprojAssemblyReference.cache

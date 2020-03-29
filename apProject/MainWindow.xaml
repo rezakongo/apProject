@@ -1,0 +1,187 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:apProject"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="apProject.MainWindow"
+        mc:Ignorable="d"
+        Title="Barcelona" Height="450" Width="800"
+        >
+    <Border Padding="5">
+        <TabControl x:Name="tc">
+            <TabItem  Header="1">
+                <StackPanel>
+                    <!-- main table -->
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <!-- UP Table -->
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*"/>
+                                <ColumnDefinition Width="5*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <!-- Buttons -->
+                            <Grid Grid.Column="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="3*"/>
+                                    <RowDefinition Height="3*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="FC BARCELONA" FontSize="20" FontWeight="Bold"></TextBlock>
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button x:Name="save" Grid.Column="0" Content="SAVE" Margin="5,5,5,5"></Button>
+                                    <Button x:Name="load" Grid.Column="1" Content="LOAD" Margin="5,5,5,5"></Button>
+                                    <Button x:Name="r" Grid.Column="2" Content="R" Margin="5,5,5,5"></Button>
+                                </Grid>
+                                <Button x:Name="new" Content="NEW" Grid.Row="2" Margin="5,5,5,5"></Button>
+                            </Grid>
+                            <!-- Check Box -->
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition Height="2*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="Player Position : " Grid.Row="0"></TextBlock>
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <CheckBox Name="gk" Content="GK" Margin="5,5,5,5" Grid.Column="1"></CheckBox>
+                                    <CheckBox Name="cb" Content="CB" Margin="5,5,5,5" Grid.Column="2"></CheckBox>
+                                    <CheckBox Name="sb" Content="SB" Margin="5,5,5,5" Grid.Column="3"></CheckBox>
+                                </Grid>
+                                <Grid Grid.Row="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <CheckBox Name="dmf" Content="DMF" Margin="5,5,5,5" Grid.Column="1"></CheckBox>
+                                    <CheckBox Name="cmf" Content="CMF" Margin="5,5,5,5" Grid.Column="2"></CheckBox>
+                                    <CheckBox Name="amf" Content="AMF" Margin="5,5,5,5" Grid.Column="3"></CheckBox>
+                                </Grid>
+                                <Grid Grid.Row="3">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <CheckBox Name="ss" Content="SS" Margin="5,5,5,5" Grid.Column="1"></CheckBox>
+                                    <CheckBox Name="cf" Content="CF" Margin="5,5,5,5" Grid.Column="2"></CheckBox>
+                                    <CheckBox Name="swf" Content="SWF" Margin="5,5,5,5" Grid.Column="3"></CheckBox>
+                                </Grid>
+                            </Grid>
+                            <!-- ability -->
+                            <Grid Grid.Column="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="2*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="Ability :" Grid.Row="0"></TextBlock>
+                                <ComboBox Name="ability" Text="Select Ability" Grid.Row="1">
+                                    <ComboBoxItem Tag="speed" Content="Speed"></ComboBoxItem>
+                                    <ComboBoxItem Tag="power" Content="Power"></ComboBoxItem>
+                                    <ComboBoxItem Tag="shoot" Content="Shoot"></ComboBoxItem>
+                                    <ComboBoxItem Tag="stamina" Content="Stamina"></ComboBoxItem>
+                                    <ComboBoxItem Tag="goalKipping" Content="Goal Kipping"></ComboBoxItem>
+                                    <ComboBoxItem Tag="teamWork" Content="Team Work"></ComboBoxItem>
+                                    <ComboBoxItem Tag="pass" Content="Pass"></ComboBoxItem>
+                                </ComboBox>
+                            </Grid>
+                        </Grid>
+                        <!--Down of Page-->
+                        <Grid Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="20*" />
+                                <RowDefinition Height="3*" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Text="TEAMS : "></TextBlock>
+                            <!-- textbox -->
+                            <TextBox x:Name="team" Text="Enter the Teams Of Player Before Barca" Grid.Row="1" Height="230"></TextBox>
+                            <Button x:Name="np" Click="np_Click" Content="NEXT PAGE" Grid.Row="2" Margin="5,5,5,5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="180"></Button>
+                        </Grid>
+                    </Grid>
+                    
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="2" Name="t2" Selector.Selected="t2_Selected">
+                <StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="4*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="7*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="FC BARCELONA" Margin="5,20,5,20" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"></TextBlock>
+                            <!--NameGrid-->
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="NAME : " Margin="5,5,5,5" Grid.Column="0"></TextBlock>
+                                <TextBox x:Name="name" Margin="5,5,5,5" Grid.Column="1"></TextBox>
+                            </Grid>
+                            <!--FamilyGrid-->
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Family : " Margin="5,5,5,5" Grid.Column="0"></TextBlock>
+                                <TextBox x:Name="family" Margin="5,5,5,5" Grid.Column="1"></TextBox>
+                            </Grid>
+                            <!--AgeGrid-->
+                            <Grid Grid.Row="3" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="AGE : " Margin="5,5,5,5" Grid.Column="0"></TextBlock>
+                                <TextBox x:Name="age" Margin="5,5,5,5" Grid.Column="1"></TextBox>
+                            </Grid>
+                            <!--EquationGrid-->
+                            <Grid Grid.Row="4" Height="150">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Equations : " Margin="5,5,5,5" Grid.Column="0"></TextBlock>
+                                <TextBox x:Name="equation" Margin="5,5,5,5" Grid.Column="1"></TextBox>
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Image Source="C:\Users\Parsa\Documents\C# Programs\apProject 1\apProject\barcelona.png" Margin="10,10,10,10"></Image>
+                        </Grid>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Border>
+</Window>
